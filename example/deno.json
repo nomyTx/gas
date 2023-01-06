@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "lib": [
+      "dom",
+      "deno.window"
+    ]
+  }
+}

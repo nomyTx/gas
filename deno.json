@@ -1,0 +1,14 @@
+{
+	"importMap": "./import_map.json",
+	"compilerOptions": {
+		"jsxFactory": "h",
+		"jsxFragmentFactory": "Fragment",
+		"lib": ["dom", "deno.window"]
+	},
+	"fmt": {
+		"options": {
+			"indentWidth": 2,
+			"useTabs": true
+		}
+	}
+}

@@ -3,8 +3,8 @@ import { Helmet, renderSSR } from "@jsx";
 import { Context, helpers } from "@oak";
 import { error } from "./logger.ts";
 
-let routesDir: URL;
-let staticDir: URL;
+let routesDir: string;
+let staticDir: string;
 
 interface Route {
 	name: string;
@@ -137,8 +137,8 @@ async function handle(
 export async function routeHandler(
 	ctx: Context,
 	options: {
-		routesDir: URL;
-		staticDir: URL;
+		routesDir: string;
+		staticDir: string;
 	},
 ) {
 	routesDir = options.routesDir;

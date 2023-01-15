@@ -23,8 +23,8 @@ const app = new Application();
 
 app.use(async (ctx) => {
 	await routeHandler(ctx, {
-		routesDir: new URL(join(Deno.cwd(), config.routesDir || "routes")),
-		staticDir: new URL(join(Deno.cwd(), config.staticDir || "static")),
+		routesDir: join(Deno.cwd(), config.routesDir ?? "routes"),
+		staticDir: join(Deno.cwd(), config.staticDir ?? "static"),
 	});
 });
 
@@ -36,6 +36,6 @@ app.addEventListener("listen", (event) => {
 });
 
 await app.listen({
-	port: config.port || 3000,
-	hostname: config.hostname || "0.0.0.0",
+	port: config.port ?? 3000,
+	hostname: config.hostname ?? "0.0.0.0",
 });
